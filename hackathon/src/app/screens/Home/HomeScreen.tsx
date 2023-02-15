@@ -8,7 +8,7 @@ export function HomeScreen(props: HomeScreenProps) {
   return (
     <div>
       <Grid container spacing={2} rowSpacing={3}>
-        <Grid item xs={8}>
+        <Grid item xs={11}>
           <Grid container spacing={2} rowSpacing={3} style={{ gap: 15 }}>
             <h1 style={{ width: '100%' }}> כל הפרויקטים </h1>
             <SimpleProject
@@ -38,9 +38,28 @@ export function HomeScreen(props: HomeScreenProps) {
                מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
                וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
             />
+
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              phoneNumber="509595094"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              phoneNumber="509595094"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
           </Grid>
         </Grid>
-        <Grid item xs={4}>
+        {/* <Grid item xs={4}>
           <Grid container spacing={2} rowSpacing={3} style={{ gap: 15 }}>
             <h1> הפרוייקטים שלי</h1>
             <Divider orientation="vertical" />
@@ -63,7 +82,7 @@ export function HomeScreen(props: HomeScreenProps) {
                וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
             />
           </Grid>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

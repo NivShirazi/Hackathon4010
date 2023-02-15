@@ -29,7 +29,7 @@ export default function SimpleProject(props: ProjectProps) {
 
   return (
     <Card
-      sx={{ width: '50%', maxWidth: 400, minWidth: '300px' }}
+      sx={{ width: '30%', maxWidth: '400px', minWidth: '250px' }}
       style={{ backgroundColor: '#f5f5f5' }}
     >
       <CardHeader
