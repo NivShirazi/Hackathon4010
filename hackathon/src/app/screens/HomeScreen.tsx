@@ -1,5 +1,5 @@
-import PrimarySearchAppBar from '../components/appBar/appBar';
-import Project from '../components/project/project';
+import { Divider, Grid } from '@mui/material';
+import SimpleProject from '../components/simpleProject/simpleProject';
 
 /* eslint-disable-next-line */
 export interface HomeScreenProps {}
@@ -7,8 +7,59 @@ export interface HomeScreenProps {}
 export function HomeScreen(props: HomeScreenProps) {
   return (
     <div>
-      <h1> sidebarfsdfsd</h1>
-      <h1> home page</h1>
+      <Grid container spacing={2} rowSpacing={3}>
+        <Grid item xs={8}>
+          <Grid container spacing={2} rowSpacing={3} style={{ gap: 15 }}>
+            <h1 style={{ width: '100%' }}> כל הפרויקטים </h1>
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
+          </Grid>
+        </Grid>
+        <Grid item xs={4}>
+          <Grid container spacing={2} rowSpacing={3} style={{ gap: 15 }}>
+            <h1> הפרוייקטים שלי</h1>
+            <Divider orientation="vertical" />
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
+            <SimpleProject
+              authorName="ניב שיראזי"
+              projName="פרויקט חדשני"
+              date="15/02/23"
+              description='לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד.
+               מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים,
+               וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי.'
+            />
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 }

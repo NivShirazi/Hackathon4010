@@ -23,7 +23,10 @@ export interface ProjectProps {
 
 export default function SimpleProject(props: ProjectProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      sx={{ width: '50%', maxWidth: 400, minWidth: '300px' }}
+      style={{ backgroundColor: '#f5f5f5' }}
+    >
       <CardHeader
         avatar={
           <Avatar
