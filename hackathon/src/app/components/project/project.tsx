@@ -8,7 +8,9 @@ export interface ProjectProps {
 export function Project(props: ProjectProps) {
   return (
     <div className={styles['container']}>
-      <h2 className={styles['component-name']}>Example Component Name</h2>
+      <h2 className={styles['component-name']}>
+        Example Component Name {props.name}
+      </h2>
       <p className={styles['component-description']}>
         This is an example component description.
       </p>
