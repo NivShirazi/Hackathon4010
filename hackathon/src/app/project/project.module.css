@@ -1,0 +1,15 @@
+.container {
+    border: 3px solid #000000; /* Add a border around the component */
+    padding: 1rem; /* Add padding to the component */
+  }
+  
+  .component-name {
+    font-size: 2rem; /* Adjust the font size to your liking */
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Add some space between the name and the description */
+  }
+  
+  .component-description {
+    font-size: 1.2rem; /* Adjust the font size to your liking */
+    color: #666; /* Change the color to your liking */
+  }
