@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Project from './components/project/project';
 import styles from './app.module.css';
+import SimpleProject from './components/simpleProject/simpleProject';
 
 export function App() {
   return (
@@ -9,7 +10,7 @@ export function App() {
         <Route
           path="/"
           element={
-            <Project
+            <SimpleProject
               authorName="ניב שיראזי"
               projName="פרויקט חדשני"
               date="15/02/23"
