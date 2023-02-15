@@ -18,10 +18,15 @@ export interface ProjectProps {
   projName: string;
   date: string;
   description: string;
+  phoneNumber: string;
   imgUrl?: string;
 }
 
 export default function SimpleProject(props: ProjectProps) {
+  const messageWhatsapp = (phoneNumber: string): void => {
+    window.location.href = `https://wa.me/${phoneNumber}`;
+  };
+
   return (
     <Card
       sx={{ width: '50%', maxWidth: 400, minWidth: '300px' }}
@@ -75,9 +80,17 @@ export default function SimpleProject(props: ProjectProps) {
         <IconButton aria-label="mail">
           <ContactMailIcon />
         </IconButton>
-        <IconButton aria-label="whatsapp">
-          <WhatsAppIcon />
-        </IconButton>
+        <a
+          aria-label="whatsapp"
+          href="https://wa.me/509595094?text=%D7%94%D7%99%D7%99%2C%20%D7%A0%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%91%D7%99%D7%90%20%D7%9C%D7%9A%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98"
+        >
+          <WhatsAppIcon
+            onClick={() => {
+              console.log('whatsapp');
+              messageWhatsapp(props.phoneNumber);
+            }}
+          />
+        </a>
       </CardActions>
     </Card>
   );
