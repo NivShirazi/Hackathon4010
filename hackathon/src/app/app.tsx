@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import Project from './components/project/project';
 import styles from './app.module.css';
 import SimpleProject from './components/simpleProject/simpleProject';
 
