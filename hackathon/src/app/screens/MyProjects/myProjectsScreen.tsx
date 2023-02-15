@@ -1,4 +1,5 @@
 import { Button, Grid } from "@mui/material";
+import { positions, textAlign } from "@mui/system";
 import ColorButtons from "./components/followLink";
 import BoxSx from "./components/headButtons";
 
@@ -11,8 +12,8 @@ export function MyProjectsScreen(props: MyProjectsScreenProps) {
     <div>
     <Grid container spacing={2} rowSpacing={3}>
       <Grid item xs={11}>
-        <Grid container spacing={2} rowSpacing={3} justifyContent = {"center"} style={{ gap: 15 }}>
-          <h1 style={{ width: '100%' }}> הפרויקט שלי </h1>
+        <Grid container spacing={2} rowSpacing={3} justifyContent = {"center"} text-alignContent = {"center"} style={{ gap: 15 }}>
+          <h1 style={{ width: '100%', position : "relative" , right: "50%"}} > הפרויקט שלי </h1>
           <BoxSx 
           title="שם הפרויקט"/>
           <BoxSx 

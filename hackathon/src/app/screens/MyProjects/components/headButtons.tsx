@@ -18,7 +18,7 @@ export default function BoxSx(props: BoxProps) {
         },
       }}      
     >
-        <h2> {props.title} </h2>
+        <h2 style = {{position : "relative" , right: "25%", width : "100%"}}> {props.title} </h2>
         </Box>
   );
 }
