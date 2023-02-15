@@ -1,5 +1,5 @@
 import { Divider, Grid } from '@mui/material';
-import SimpleProject from '../components/simpleProject/simpleProject';
+import SimpleProject from 'src/app/components/simpleProject/simpleProject';
 
 /* eslint-disable-next-line */
 export interface HomeScreenProps {}

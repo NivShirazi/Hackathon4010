@@ -12,23 +12,33 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['עמוד הבית', 'במעקב', 'הפרוייקט שלי', 'התראות'];
+const pages = [
+  { name: 'עמוד הבית', route: '/' },
+  { name: 'במעקב', route: '/following' },
+  { name: 'הפרוייקט שלי', route: '/myProjects' },
+];
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleOpenNavMenu = (event: React.ChangeEvent<any>) => {
     setAnchorElNav(event.currentTarget);
   };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleOpenUserMenu = (event: React.ChangeEvent<any>) => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (route: string) => {
     setAnchorElNav(null);
+    console.log(route);
+    navigate(route);
   };
 
   const handleCloseUserMenu = () => {
@@ -88,8 +98,11 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={page.name}
+                  onClick={() => handleCloseNavMenu(page.route)}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -116,11 +129,11 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.name}
+                onClick={() => handleCloseNavMenu(page.route)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>

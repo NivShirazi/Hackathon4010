@@ -1,7 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
 import ResponsiveAppBar from './components/appBar/appBar';
-import HomeScreen from './screens/HomeScreen';
+import FollowingScreen from './screens/Following/followingScreen';
+import HomeScreen from './screens/Home/HomeScreen';
+import MyProjectsScreen from './screens/MyProjects/myProjectsScreen';
+import ProfileScreen from './screens/Profile/profilePage';
+import RegisterScreen from './screens/Register/registerScreen';
 
 export function App() {
   return (
@@ -9,8 +13,10 @@ export function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<HomeScreen />}></Route>
-        <Route path="/page1" element={<h1> page 1</h1>}></Route>
-        <Route path="/page2" element={<h1> page 2</h1>}></Route>
+        <Route path="/myProjects" element={<MyProjectsScreen />}></Route>
+        <Route path="/following" element={<FollowingScreen />}></Route>
+        <Route path="/register" element={<RegisterScreen />}></Route>
+        <Route path="/profile" element={<ProfileScreen />}></Route>
       </Routes>
     </div>
   );
