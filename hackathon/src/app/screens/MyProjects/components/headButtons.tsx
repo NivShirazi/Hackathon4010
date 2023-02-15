@@ -9,7 +9,7 @@ export default function BoxSx(props: BoxProps) {
   return (
     <Box
       sx={{
-        width: 150,
+        width: "20%",
         height: 150,
         backgroundColor: 'primary.dark',
         '&:hover': {

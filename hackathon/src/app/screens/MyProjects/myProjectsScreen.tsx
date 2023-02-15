@@ -1,5 +1,7 @@
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
+import ColorButtons from "./components/followLink";
 import BoxSx from "./components/headButtons";
+
 
 /* eslint-disable-next-line */
 export interface MyProjectsScreenProps {}
@@ -9,7 +11,7 @@ export function MyProjectsScreen(props: MyProjectsScreenProps) {
     <div>
     <Grid container spacing={2} rowSpacing={3}>
       <Grid item xs={11}>
-        <Grid container spacing={2} rowSpacing={3} style={{ gap: 15 }}>
+        <Grid container spacing={2} rowSpacing={3} justifyContent = {"center"} style={{ gap: 15 }}>
           <h1 style={{ width: '100%' }}> הפרויקט שלי </h1>
           <BoxSx 
           title="שם הפרויקט"/>
@@ -20,6 +22,9 @@ export function MyProjectsScreen(props: MyProjectsScreenProps) {
           title = "על השגריר"/>
           </Grid>
           </Grid>
+          </Grid>
+          <Grid mt={"10px"}>
+          <ColorButtons title = "FOLLOW"></ColorButtons>
           </Grid>
     </div>
   )
