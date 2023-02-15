@@ -18,13 +18,30 @@ export interface ProjectProps {
   projName: string;
   date: string;
   description: string;
+  phoneNumber: string;
   imgUrl?: string;
 }
 
 export default function SimpleProject(props: ProjectProps) {
+  /**
+   * send a whatsapp message
+   * @param phoneNumber - the phone number to send the whatsapp mwssage
+   */
+  const messageWhatsapp = (phoneNumber: string): void => {
+    window.location.href = `https://wa.me/${phoneNumber}`;
+  };
+
+  /**
+   * redirect to email
+   * @param email - the email to send the mail
+   */
+  const sendEmail = (email: string): void => {
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
     <Card
-      sx={{ width: '50%', maxWidth: 400, minWidth: '300px' }}
+      sx={{ width: '30%', maxWidth: '400px', minWidth: '250px' }}
       style={{ backgroundColor: '#f5f5f5' }}
     >
       <CardHeader
@@ -73,10 +90,19 @@ export default function SimpleProject(props: ProjectProps) {
       </Box>
       <CardActions disableSpacing>
         <IconButton aria-label="mail">
-          <ContactMailIcon />
+          <ContactMailIcon
+            onClick={() => {
+              sendEmail('nivshirazi9@gmail.com');
+            }}
+          />
         </IconButton>
-        <IconButton aria-label="whatsapp">
-          <WhatsAppIcon />
+        <IconButton>
+          <WhatsAppIcon
+            onClick={() => {
+              console.log('whatsapp');
+              messageWhatsapp(props.phoneNumber);
+            }}
+          />
         </IconButton>
       </CardActions>
     </Card>

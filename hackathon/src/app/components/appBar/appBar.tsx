@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../../assets/icon.jpeg';
 
 const pages = [
   { name: 'עמוד הבית', route: '/' },
@@ -37,7 +38,6 @@ function ResponsiveAppBar() {
 
   const handleCloseNavMenu = (route: string) => {
     setAnchorElNav(null);
-    console.log(route);
     navigate(route);
   };
 
@@ -49,7 +49,11 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img
+            style={{ width: 45, height: 45, borderRadius: '50%' }}
+            src={logo}
+            alt="Logo"
+          />
           <Typography
             variant="h6"
             noWrap
