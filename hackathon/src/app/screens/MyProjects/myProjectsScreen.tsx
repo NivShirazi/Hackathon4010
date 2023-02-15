@@ -13,7 +13,7 @@ export function MyProjectsScreen(props: MyProjectsScreenProps) {
     <Grid container spacing={2} rowSpacing={3}>
       <Grid item xs={11}>
         <Grid container spacing={2} rowSpacing={3} justifyContent = {"center"} text-alignContent = {"center"} style={{ gap: 15 }}>
-          <h1 style={{ width: '100%', position : "relative" , right: "50%"}} > הפרויקט שלי </h1>
+          <h1 style={{ width: '100%', position : "relative" , right: "47%"}} > הפרויקט שלי </h1>
           <BoxSx 
           title="שם הפרויקט"/>
           <BoxSx 
