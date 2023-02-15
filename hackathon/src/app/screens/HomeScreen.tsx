@@ -9,7 +9,6 @@ export function HomeScreen(props: HomeScreenProps) {
     <div>
       <h1> sidebarfsdfsd</h1>
       <h1> home page</h1>
-      <Project name="niv" />
     </div>
   );
 }

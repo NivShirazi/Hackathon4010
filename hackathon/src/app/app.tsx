@@ -1,10 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
+import ResponsiveAppBar from './components/appBar/appBar';
 import SimpleProject from './components/simpleProject/simpleProject';
 
 export function App() {
   return (
     <div className={styles['app']}>
+      <ResponsiveAppBar />
       <Routes>
         <Route
           path="/"
