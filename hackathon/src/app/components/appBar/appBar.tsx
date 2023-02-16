@@ -48,25 +48,24 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style = {{backgroundColor:'#B98376'}}>
         <Toolbar disableGutters>
-          <img
-            style={{ width: 45, height: 45, borderRadius: '50%' }}
+          <a href = "/"> <img
+            style={{ width: 45, height: 45, borderRadius: '50%'}}
             src={logo}
             alt="Logo"
-          />
+          /> </a>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#F8D17D',
               textDecoration: 'none',
             }}
           >
