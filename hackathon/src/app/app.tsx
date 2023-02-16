@@ -3,7 +3,8 @@ import styles from './app.module.css';
 import ResponsiveAppBar from './components/appBar/appBar';
 import FollowingScreen from './screens/Following/followingScreen';
 import HomeScreen from './screens/Home/HomeScreen';
-import MyProjectsScreen from './screens/MyProjects/myProjectsScreen';
+import Album from './screens/MyProjects/MyProj';
+import MyProj from './screens/MyProjects/MyProj';
 import ProfileScreen from './screens/Profile/profilePage';
 import RegisterScreen from './screens/Register/registerScreen';
 
@@ -13,7 +14,7 @@ export function App() {
       <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<HomeScreen />}></Route>
-        <Route path="/myProjects" element={<MyProjectsScreen />}></Route>
+        <Route path="/myProjects" element={<Album />}></Route>
         <Route path="/following" element={<FollowingScreen />}></Route>
         <Route path="/register" element={<RegisterScreen />}></Route>
         <Route path="/profile" element={<ProfileScreen />}></Route>
