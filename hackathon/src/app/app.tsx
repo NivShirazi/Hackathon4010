@@ -4,7 +4,6 @@ import ResponsiveAppBar from './components/appBar/appBar';
 import FollowingScreen from './screens/Following/followingScreen';
 import HomeScreen from './screens/Home/HomeScreen';
 import Album from './screens/MyProjects/MyProj';
-import MyProj from './screens/MyProjects/MyProj';
 import ProfileScreen from './screens/Profile/profilePage';
 import RegisterScreen from './screens/Register/registerScreen';
 import UploadScreen from './screens/Upload/uploadScreen';
