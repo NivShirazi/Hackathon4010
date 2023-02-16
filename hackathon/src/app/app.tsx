@@ -7,6 +7,7 @@ import Album from './screens/MyProjects/MyProj';
 import MyProj from './screens/MyProjects/MyProj';
 import ProfileScreen from './screens/Profile/profilePage';
 import RegisterScreen from './screens/Register/registerScreen';
+import UploadScreen from './screens/Upload/uploadScreen';
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
         <Route path="/following" element={<FollowingScreen />}></Route>
         <Route path="/register" element={<RegisterScreen />}></Route>
         <Route path="/profile" element={<ProfileScreen />}></Route>
+        <Route path="/upload" element={<UploadScreen />}></Route>
       </Routes>
     </div>
   );
