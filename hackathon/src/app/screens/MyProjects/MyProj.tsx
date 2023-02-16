@@ -18,6 +18,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import BoxSx from "./components/headButtons";
 import { positions, textAlign } from "@mui/system";
 import ColorButtons from "./components/followLink";
+import { Chip } from '@mui/material';
 
 
 function Copyright() {
@@ -33,7 +34,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1];
 
 const theme = createTheme();
 
@@ -83,18 +84,21 @@ export default function Album() {
               המלונה החמה
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              בפרוייקט שלי אני תומך בכלבים ערביים, חירשים ועיוורים, אנחנו בונים להם גני משחקים ייעודיים
-              אנחנו עובדים עם ערים רבות בכל רחבי הארץ, בהם אנו מחברים בין גני ילדים להורים חד הוריים וגידמים
-              לבין כלבים שרוצים בית חם 3>
+             בפרוייקט שלי אני תומכת בכלבים עזובים ומחברת בינהם לבין גני ילדים בסיכון. הפרויקט מנוהל בדרום אבל אנו פועלים בכל רחבי הארץ. 
+             הפרויקט פעיל מאז 2020 וכיום אנו מפעילים התנדבויות בשלושה גני ילדים על בסיס יומי
+            
             </Typography>
+            <div style = {{position: "relative", right: "30%"}}>
+              <img src ='.\assets\dog.jpg' width = "45%" ></img>
+           </div>
             <Stack
               sx={{ pt: 4 }}
               direction="row"
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              {/* <Button variant="contained">Main call to action</Button>
+              <Button variant="outlined">Secondary action</Button> */}
             </Stack>
           </Container>
         </Box>
@@ -112,21 +116,28 @@ export default function Album() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image="https://source.unsplash.com/random"
+                    image=".\assets\car.jpg"
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      שת"פ
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                    אשמח לקבל עזרה בהסעה של הילדים לגינות כלבים כדי שיוכלו להתחבר יותר
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                  <Box
+                p = {2}
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-around"
+                flexWrap="wrap"
+            >
+                <Chip label="חינוך" style={{marginLeft: "6px"}}/>
+                <Chip label = "משאבים"></Chip>
+            </Box>
                   </CardActions>
                 </Card>
               </Grid>
@@ -134,22 +145,6 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

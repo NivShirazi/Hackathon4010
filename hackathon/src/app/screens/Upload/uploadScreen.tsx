@@ -4,6 +4,9 @@ import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import { useNavigate } from 'react-router-dom';
 import './uploadScreen.css'; // import CSS file
+import MultipleSelect from '../Register/components/addList';
+import { Grid } from '@mui/material';
+import MultipleSelectTypes from './components/addListType';
 
 const UploadScreen = () => {
   const [name, setName] = useState<string>('');
@@ -65,11 +68,13 @@ const UploadScreen = () => {
         className="form-field"
       />
       <br />
-      <TextField
-        label="הוסיפו תגיות"
-        onKeyUp={handleChipAdd}
-        className="form-field"
-      />
+      <Grid item xs={12}>
+              <MultipleSelect></MultipleSelect>
+              </Grid>
+      <Grid item xs={12}>
+              <MultipleSelectTypes></MultipleSelectTypes>
+              </Grid>        
+  
       <div>
         {chips.map((chip) => (
           <Chip
