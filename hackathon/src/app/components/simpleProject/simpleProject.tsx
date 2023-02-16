@@ -51,9 +51,10 @@ export default function SimpleProject(props: ProjectProps) {
                 width: '49%',
                 minWidth: '380px',
                 borderRadius: '10%',
-                display: 'grid'
+                display: 'grid',
+
             }}
-            style={{backgroundColor: '#f5f5f5'}}
+            style={{backgroundColor: '#F8D17D'}}
         >
             <CardHeader
                 avatar={
