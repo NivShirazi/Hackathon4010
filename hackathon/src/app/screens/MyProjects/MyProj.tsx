@@ -15,6 +15,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Chip } from '@mui/material';
 import { data } from './data';
+import aboutImage from '../../../assets/ez.jpg';
 
 const theme = createTheme();
 
@@ -42,6 +43,33 @@ export default function Album() {
     }
   };
 
+  const styles = {
+    container: {
+      maxWidth: '600px',
+      margin: '0 auto',
+      padding: '20px',
+      backgroundColor: '#f1f1f1',
+      borderRadius: '5px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+    },
+    heading: {
+      fontSize: '2rem',
+      color: '#333',
+    },
+    paragraph: {
+      fontSize: '1.2rem',
+      lineHeight: '1.5',
+    },
+    image: {
+      flex: '0 0 150px',
+      marginRight: '20px',
+      borderRadius: '5px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+      display: 'block',
+      margin: 'auto',
+    },
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -54,7 +82,7 @@ export default function Album() {
               width: '20%',
               position: 'relative',
               right: '7%',
-              backgroundColor: '#B98376',
+              backgroundColor: '#ffae26',
             }}
             variant="contained"
             size="large"
@@ -67,7 +95,7 @@ export default function Album() {
               width: '20%',
               position: 'relative',
               right: '20%',
-              backgroundColor: '#B98376',
+              backgroundColor: '#ffae26',
             }}
             variant="contained"
             size="large"
@@ -80,10 +108,11 @@ export default function Album() {
               width: '20%',
               position: 'relative',
               right: '30%',
-              backgroundColor: '#B98376',
+              backgroundColor: '#ffae26',
             }}
             variant="contained"
             size="large"
+            onClick={handleClickScroll3}
           >
             פרטי השגריר
           </Button>
@@ -99,6 +128,7 @@ export default function Album() {
           display: 'block',
           margin: 'auto',
           fontSize: 20,
+          backgroundColor: '#f46d36',
         }}
       >
         עקוב אחרי הפרוייקט
@@ -198,6 +228,16 @@ export default function Album() {
             ))}
           </Grid>
         </Container>
+        <div style={styles.container} id="three">
+          <img src={aboutImage} alt="About Us" style={styles.image} />
+          <div>
+            <h1 style={styles.heading}>קצת עליי</h1>
+            <p style={styles.paragraph}>
+              אני אורי בוכריס ואני שגריר בעמותת LEAD. אני מאוד אוהב עיצוב ותכנות
+              ובשעות הפנאי אני משחק כדורגל{' '}
+            </p>
+          </div>
+        </div>
       </main>
     </ThemeProvider>
   );
