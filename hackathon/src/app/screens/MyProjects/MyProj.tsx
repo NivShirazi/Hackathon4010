@@ -19,21 +19,34 @@ import { data } from './data';
 const theme = createTheme();
 
 export default function Album() {
+  const handleClickScroll = () => {
+    const element = document.getElementById('first');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleClickScroll2 = () => {
+    const element = document.getElementById('second');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleClickScroll3 = () => {
+    const element = document.getElementById('three');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative" color="transparent">
-        <Toolbar>
-          <Typography
-            style={{ width: '100%', position: 'relative', right: '50%' }}
-            variant="h6"
-            color="GrayText"
-            noWrap
-          >
-            הפרוייקט שלי
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <br />
+      <AppBar position="relative" color="transparent" />
       <Box sx={{ '& button': { m: 1 } }}>
         <div>
           <Button
@@ -45,6 +58,7 @@ export default function Album() {
             }}
             variant="contained"
             size="large"
+            onClick={handleClickScroll}
           >
             פרטי הפרוייקט
           </Button>
@@ -57,6 +71,7 @@ export default function Album() {
             }}
             variant="contained"
             size="large"
+            onClick={handleClickScroll2}
           >
             שיתופי פעולה
           </Button>
@@ -96,7 +111,7 @@ export default function Album() {
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
+          <Container maxWidth="sm" id="first">
             <Typography
               component="h1"
               variant="h2"
@@ -131,7 +146,7 @@ export default function Album() {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 8 }} maxWidth="md" id="second">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {data.map((card) => (
