@@ -21,6 +21,7 @@ const pages = [
   { name: 'הפרוייקט שלי', route: '/myProjects' },
   { name: 'הרשמה', route: '/register' },
   { name: 'התחברות', route: '/signin' },
+  { name: 'צור פרויקט', route: '/upload' },
 ];
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
