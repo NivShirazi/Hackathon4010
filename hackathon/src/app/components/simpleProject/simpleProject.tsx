@@ -53,9 +53,10 @@ export default function SimpleProject(props: ProjectProps) {
                 width: '49%',
                 minWidth: '380px',
                 borderRadius: '10%',
-                display: 'grid'
+                display: 'grid',
+
             }}
-            style={{backgroundColor: '#f5f5f5'}}
+            style={{backgroundColor: '#F8D17D'}}
         >
             <CardHeader
                 avatar={
@@ -97,7 +98,8 @@ export default function SimpleProject(props: ProjectProps) {
                 <Chip label={props.labels.at(1)}/>
                 <Chip label={props.labels.at(2)}/>
             </Box>
-            <CardActions disableSpacing sx={{justifyContent: 'space-between', padding: '12px'}}>
+            <CardActions disableSpacing sx={{justifyContent: 'space-between'
+                , padding: '18px'}}>
                 <Grid>
                     <IconButton aria-label="mail">
                         <ContactMailIcon
