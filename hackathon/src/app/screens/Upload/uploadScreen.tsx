@@ -36,7 +36,7 @@ const UploadScreen = () => {
     } catch (e) {
       console.log('the error is ' + e);
     }
-    navigate('/');
+    navigate('/home');
   };
 
   return (
