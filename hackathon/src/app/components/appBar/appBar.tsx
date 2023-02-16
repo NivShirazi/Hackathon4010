@@ -16,10 +16,8 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/icon.jpeg';
 
 const pages = [
-  { name: 'במעקב', route: '/following' },
   { name: 'הפרוייקט שלי', route: '/myProjects' },
   { name: 'צור שת"פ', route: '/upload' },
-  { name: 'הרשמה', route: '/register' }
 ];
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
