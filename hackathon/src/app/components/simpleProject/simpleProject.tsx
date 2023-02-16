@@ -96,7 +96,8 @@ export default function SimpleProject(props: ProjectProps) {
                 <Chip label="חינוך"/>
                 <Chip label="כלכלה"/>
             </Box>
-            <CardActions disableSpacing sx={{justifyContent: 'space-between', padding: '12px'}}>
+            <CardActions disableSpacing sx={{justifyContent: 'space-between'
+                , padding: '18px'}}>
                 <Grid>
                     <IconButton aria-label="mail">
                         <ContactMailIcon
