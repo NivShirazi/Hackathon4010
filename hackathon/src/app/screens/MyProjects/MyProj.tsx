@@ -15,7 +15,6 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Chip } from '@mui/material';
 import { data } from './data';
-const cards = [1, 2, 3];
 
 const theme = createTheme();
 
