@@ -13,6 +13,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Chip from '@mui/material/Chip';
 import Button from "@mui/material/Button";
 import {useNavigate} from "react-router-dom";
+import { ListClassKey } from '@mui/material';
 
 export interface ProjectProps {
     authorName: string;
@@ -20,6 +21,7 @@ export interface ProjectProps {
     date: string;
     description: string;
     phoneNumber: string;
+    labels: string[];
     imgUrl?: string;
 }
 
@@ -77,7 +79,7 @@ export default function SimpleProject(props: ProjectProps) {
                     <CardMedia
                         component="img"
                         height="194"
-                        image="assets\image.jpg"
+                        image={props.imgUrl}
                         alt="project image"
                     />
                 </Grid>
@@ -91,10 +93,9 @@ export default function SimpleProject(props: ProjectProps) {
                 flexWrap="wrap"
                 padding={0}
             >
-                <Chip label="ספורט ובריאות"/>
-                <Chip label="איכות הסביבה"/>
-                <Chip label="חינוך"/>
-                <Chip label="כלכלה"/>
+                <Chip label={props.labels.at(0)}/>
+                <Chip label={props.labels.at(1)}/>
+                <Chip label={props.labels.at(2)}/>
             </Box>
             <CardActions disableSpacing sx={{justifyContent: 'space-between', padding: '12px'}}>
                 <Grid>
