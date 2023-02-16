@@ -75,7 +75,20 @@ export default function Album() {
           </Button>
         </div>
       </Box>
-
+      <br />
+      <Button
+        variant="contained"
+        style={{
+          alignContent: 'center',
+          justifyContent: 'center',
+          width: '50%',
+          display: 'block',
+          margin: 'auto',
+          fontSize: 20,
+        }}
+      >
+        עקוב אחרי הפרוייקט
+      </Button>
       <main>
         <Box
           sx={{
