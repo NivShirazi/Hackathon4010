@@ -40,14 +40,19 @@ export default function SimpleProject(props: ProjectProps) {
         window.location.href = `mailto:${email}`;
     };
     const nevigate = useNavigate();
-    const moveToProject = ()=>{
+    const moveToProject = () => {
         nevigate("/myProjects")
         // window.open(window.location.origin.concat("/myProjects")) ;
     }
 
     return (
         <Card
-            sx={{width: '30%', maxWidth: '400px', minWidth: '250px'}}
+            sx={{
+                width: '49%',
+                minWidth: '380px',
+                borderRadius: '10%',
+                display: 'grid'
+            }}
             style={{backgroundColor: '#f5f5f5'}}
         >
             <CardHeader
@@ -72,44 +77,50 @@ export default function SimpleProject(props: ProjectProps) {
                     <CardMedia
                         component="img"
                         height="194"
-                        image="assets\download.jpg"
+                        image="assets\image.jpg"
                         alt="project image"
                     />
                 </Grid>
             </Grid>
+            <h1> תחומי עניין</h1>
             <Box
                 p={2}
                 display="flex"
                 flexDirection="row"
                 justifyContent="space-around"
                 flexWrap="wrap"
+                padding={0}
             >
                 <Chip label="ספורט ובריאות"/>
                 <Chip label="איכות הסביבה"/>
                 <Chip label="חינוך"/>
                 <Chip label="כלכלה"/>
             </Box>
-            <CardActions disableSpacing>
-                <IconButton aria-label="mail" >
-                    <ContactMailIcon
-                        onClick={() => {
-                            sendEmail('nivshirazi9@gmail.com');
-                        }}
-                    />
-                </IconButton>
-                <IconButton>
-                    <WhatsAppIcon
-                        onClick={() => {
-                            console.log('whatsapp');
-                            messageWhatsapp(props.phoneNumber);
-                        }}
-                    />
-                </IconButton>
-               <div>
-                <Button variant="contained" color={"error"} onClick={()=>{moveToProject();}}>
-                    לעמוד הפרויקט
-                </Button>
-               </div>
+            <CardActions disableSpacing sx={{justifyContent: 'space-between', padding: '12px'}}>
+                <Grid>
+                    <IconButton aria-label="mail">
+                        <ContactMailIcon
+                            onClick={() => {
+                                sendEmail('nivshirazi9@gmail.com');
+                            }}
+                        />
+                    </IconButton>
+                    <IconButton>
+                        <WhatsAppIcon
+                            onClick={() => {
+                                console.log('whatsapp');
+                                messageWhatsapp(props.phoneNumber);
+                            }}
+                        />
+                    </IconButton>
+                </Grid>
+                <Grid>
+                    <Button variant="contained" color={"error"} onClick={() => {
+                        moveToProject();
+                    }}>
+                        לעמוד הפרויקט
+                    </Button>
+                </Grid>
             </CardActions>
         </Card>
     );

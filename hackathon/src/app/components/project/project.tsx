@@ -40,7 +40,7 @@ export default function RecipeReviewCard(props: ProjectProps) {
       <CardMedia
         component="img"
         height="194"
-        image="assets\download.jpg"
+        image="assets\image.jpg"
         alt="project image"
       />
       <CardContent>
