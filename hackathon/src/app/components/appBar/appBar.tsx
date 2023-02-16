@@ -16,7 +16,6 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/icon.jpeg';
 
 const pages = [
-  { name: 'עמוד הבית', route: '/' },
   { name: 'במעקב', route: '/following' },
   { name: 'הפרוייקט שלי', route: '/myProjects' },
   { name: 'הרשמה', route: '/register' },
@@ -50,29 +49,28 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style = {{backgroundColor:'#B98376'}}>
         <Toolbar disableGutters>
-          <img
-            style={{ width: 45, height: 45, borderRadius: '50%' }}
+          <a href = "/"> <img
+            style={{ width: 45, height: 45, borderRadius: '50%'}}
             src={logo}
             alt="Logo"
-          />
+          /> </a>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#F8D17D',
               textDecoration: 'none',
             }}
           >
-            CoLEAD
+            CO-LEAD
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

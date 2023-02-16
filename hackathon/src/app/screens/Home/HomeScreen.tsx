@@ -10,7 +10,7 @@ export function HomeScreen(props: HomeScreenProps) {
       <Grid container spacing={2} rowSpacing={3}>
         <Grid item xs={11}>
           <Grid container spacing={2} rowSpacing={3} style={{ gap: 15 }}>
-            <h1 style={{ width: '100%' }}> כל הפרויקטים </h1>
+            <h1 style = {{position : "relative" , right: "50%", width : '100%'}}>  </h1>
             <SimpleProject
               authorName="ניב שיראזי"
               projName="פרויקט חדשני"

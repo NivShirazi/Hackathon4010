@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Copyright } from '@mui/icons-material';
+import { MenuItem, Select } from '@mui/material';
+import MultipleSelect from './components/addList';
 
 function RegisterScreen(props: any) {
   return (
@@ -28,8 +30,8 @@ function RegisterScreen(props: any) {
 }
 
 const theme = createTheme();
-
 export default function SignUp() {
+  const [interest, setInterest] = React.useState("");
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -38,7 +40,9 @@ export default function SignUp() {
       password: data.get('password'),
     });
   };
-
+  const handleChange = (event: { target: { value: string; }; }) => {
+    setInterest(event.target.value as string);
+  };
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -55,7 +59,7 @@ export default function SignUp() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign up
+            הרשמה
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -71,15 +75,17 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="UserType"
-                  required
-                  fullWidth
-                  id="userType"
-                  label="סוג משתמש"
-                  autoFocus
-                />
+              <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={interest}
+          label="סוג משתמש"
+          onChange={handleChange}
+        >
+          <MenuItem value={1}>בוגר</MenuItem>
+          <MenuItem value={2}>שגריר</MenuItem>
+        </Select>
+
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -113,14 +119,7 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="intrests"
-                  label="תחומי עניין"
-                  name="intrests"
-                  autoComplete="intrests"
-                />
+              <MultipleSelect></MultipleSelect>
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -186,12 +185,12 @@ export default function SignUp() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              הרשמה
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link href="#" variant="body2">
-                  Already have an account? Sign in
+                  כבר רשום? התחבר לאתר
                 </Link>
               </Grid>
             </Grid>
