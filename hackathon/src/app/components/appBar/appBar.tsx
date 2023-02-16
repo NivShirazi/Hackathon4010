@@ -16,7 +16,6 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../../../assets/icon.jpeg';
 
 const pages = [
-  { name: 'עמוד הבית', route: '/' },
   { name: 'במעקב', route: '/following' },
   { name: 'הפרוייקט שלי', route: '/myProjects' },
   { name: 'הרשמה', route: '/register' },
@@ -71,7 +70,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            CoLEAD
+            CO-LEAD
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
