@@ -19,8 +19,7 @@ const pages = [
   { name: 'במעקב', route: '/following' },
   { name: 'הפרוייקט שלי', route: '/myProjects' },
   { name: 'צור שת"פ', route: '/upload' },
-  { name: 'הרשמה', route: '/register' },
-  { name: 'התחברות', route: '/signin' },
+  { name: 'הרשמה', route: '/register' }
 ];
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
