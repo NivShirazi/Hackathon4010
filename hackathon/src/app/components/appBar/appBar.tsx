@@ -51,7 +51,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl" style={{ backgroundColor: '#B98376' }}>
         <Toolbar disableGutters>
-          <a href="/">
+          <a href="/home">
             {' '}
             <img
               style={{ width: 45, height: 45, borderRadius: '50%' }}
