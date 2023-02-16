@@ -18,9 +18,9 @@ import logo from '../../../assets/icon.jpeg';
 const pages = [
   { name: 'במעקב', route: '/following' },
   { name: 'הפרוייקט שלי', route: '/myProjects' },
+  { name: 'צור שת"פ', route: '/upload' },
   { name: 'הרשמה', route: '/register' },
   { name: 'התחברות', route: '/signin' },
-  { name: 'צור פרויקט', route: '/upload' },
 ];
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
@@ -49,13 +49,16 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" style = {{backgroundColor:'#B98376'}}>
+      <Container maxWidth="xl" style={{ backgroundColor: '#B98376' }}>
         <Toolbar disableGutters>
-          <a href = "/"> <img
-            style={{ width: 45, height: 45, borderRadius: '50%'}}
-            src={logo}
-            alt="Logo"
-          /> </a>
+          <a href="/">
+            {' '}
+            <img
+              style={{ width: 45, height: 45, borderRadius: '50%' }}
+              src={logo}
+              alt="Logo"
+            />{' '}
+          </a>
           <Typography
             variant="h6"
             noWrap

@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
 import { useNavigate } from 'react-router-dom';
 import './uploadScreen.css'; // import CSS file
 import MultipleSelect from '../Register/components/addList';
@@ -11,7 +11,7 @@ import MultipleSelectTypes from './components/addListType';
 const UploadScreen = () => {
   const [name, setName] = useState<string>('');
   const [description, setDescription] = useState<string>('');
-  const [chips, setChips] = useState<string[]>(['das', 'dsad', 'dasddas']);
+  const [chips] = useState<string[]>([]);
   const navigate = useNavigate();
 
   const handleNameChange = (event: {
@@ -24,18 +24,6 @@ const UploadScreen = () => {
     target: { value: React.SetStateAction<string> };
   }) => {
     setDescription(event.target.value);
-  };
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleChipAdd = (event: any) => {
-    if (event.key === 'Enter') {
-      setChips([...chips, event.target.value]);
-      event.target.value = '';
-    }
-  };
-
-  const handleChipDelete = (chipToDelete: string) => () => {
-    setChips((chips) => chips.filter((chip) => chip !== chipToDelete));
   };
 
   const handleSubmit = (event: any) => {
@@ -69,25 +57,14 @@ const UploadScreen = () => {
       />
       <br />
       <Grid item xs={12}>
-              <MultipleSelect></MultipleSelect>
-              </Grid>
+        <MultipleSelect></MultipleSelect>
+      </Grid>
       <Grid item xs={12}>
-              <MultipleSelectTypes></MultipleSelectTypes>
-              </Grid>        
-  
-      <div>
-        {chips.map((chip) => (
-          <Chip
-            key={chip}
-            label={chip}
-            onDelete={handleChipDelete(chip)}
-            className="chip"
-          />
-        ))}
-      </div>
+        <MultipleSelectTypes></MultipleSelectTypes>
+      </Grid>
       <br />
       <Button type="submit" className="submit-button" onClick={handleSubmit}>
-        הוסיפו פרויקט!
+        הוסיפו שיתוף פעולה!
       </Button>{' '}
     </div>
   );
